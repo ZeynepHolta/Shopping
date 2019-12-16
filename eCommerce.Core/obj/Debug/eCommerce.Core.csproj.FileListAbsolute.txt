@@ -1,0 +1,11 @@
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\bin\Debug\eCommerce.Core.dll.config
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\bin\Debug\eCommerce.Core.dll
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\bin\Debug\eCommerce.Core.pdb
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\bin\Debug\EntityFramework.dll
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\bin\Debug\EntityFramework.xml
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\obj\Debug\eCommerce.Core.csprojAssemblyReference.cache
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\obj\Debug\eCommerce.Core.csproj.CopyComplete
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\obj\Debug\eCommerce.Core.dll
+C:\Users\zmine\Desktop\eCommerce\eCommerce.Core\obj\Debug\eCommerce.Core.pdb

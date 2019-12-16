@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "GiveAnError";
+}
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+
+        @{
+            Exception ex = null;
+
+            if (TempData["LastError"] != null)
+            {
+                ex = TempData["LastError"] as Exception;
+            }
+        }
+
+        <h1><span>Error !</span></h1>
+
+        <p>
+
+            Something went wrong, please send e-mail.
+            <br /><br /><br />
+
+            @if (ex != null)
+            {
+                <strong>Error Details : </strong>
+                @ex.Message
+                <br /><br /><br />
+            }
+
+            @BootstrapHelper.LinkList("/MainPage/Index/", "Go to main page !")
+            @BootstrapHelper.LinkList("mailto:zmineholta@gmail.com", "Send e-mail !")
+        </p>
+    </div>
+</div>
+

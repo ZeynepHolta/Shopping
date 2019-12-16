@@ -1,0 +1,37 @@
+﻿@using eCommerce
+@model List<Order>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <div>
+            @Html.ActionLink("New Order", "Create", null, new { @class = "btn btn-success" })
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Order Date</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Order item in Model)
+                {
+                    <tr>
+                        <td>@item.OrderDate</td>
+                        <td>@item.Quantity</td>
+                        <td>@item.TotalPrice</td>
+                        <td>@Html.ActionLink("Delete", "Delete", new { orderID = item.OrderId }, new { @class = "btn btn-danger" })</td>
+                        <td>@Html.ActionLink("Update", "Update", new { orderID = item.OrderId }, new { @class = "btn btn-info" })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

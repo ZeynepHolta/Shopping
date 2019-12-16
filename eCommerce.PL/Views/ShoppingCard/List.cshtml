@@ -1,0 +1,46 @@
+﻿@using eCommerce
+@model List<ShoppingCard>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            @foreach (Order item in ViewBag.Orders)
+            {
+                @foreach (Product pro in ViewBag.Products)
+                {
+                    <li class="list-group-item">@Html.ActionLink(pro.ProductName, "List", new { orderID = item.OrderId })</li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <div>
+            @Html.ActionLink("New ShoppingCard", "Create", null, new { @class = "btn btn-success" })
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Quatity</th>
+                    <th>Total Price</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ShoppingCard item in Model)
+                {
+                    <tr>
+                        <td>@item.Quantity</td>
+                        <td>@item.TotalPrice</td>
+                        <td>@Html.ActionLink("Delete", "Delete", new { productID = item.ProductId }, new { @class = "btn btn-danger" })</td>
+                        <td>@Html.ActionLink("Update", "Update", new { productID = item.ProductId }, new { @class = "btn btn-info" })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

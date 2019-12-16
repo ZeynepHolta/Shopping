@@ -1,0 +1,33 @@
+﻿@using eCommerce
+@model ShoppingCard
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>New ShoppingCard</h2>
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            @Html.DropDownListFor(a => a.ShoppingCardId, (IEnumerable<SelectListItem>)ViewBag.ShoppingCards, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(a => a.Quantity, new { @class = "form-control", placeholder = "Quantity" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(a => a.TotalPrice, new { @class = "form-control", placeholder = "Total Price" })
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Save</button>
+        </div>
+    }
+</div>
+
+<div>
+    @if (ViewBag.IsSuccess != null)
+    {
+        <span class="alert-danger">Please try again !</span>
+    }
+</div>

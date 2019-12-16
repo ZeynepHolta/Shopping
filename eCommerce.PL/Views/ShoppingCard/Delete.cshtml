@@ -1,0 +1,28 @@
+﻿@using eCommerce
+@model ShoppingCard
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>ShoppingCard Delete</h2>
+
+<p>Are you sure want to delete?</p>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>ProductName : </td>
+            <td>@Model.ProductName</td>
+        </tr>
+        <tr>
+            <td>Price : </td>
+            <td>@Model.Price</td>
+        </tr>
+        <tr>
+            <td><button type="submit" class="btn btn-primary">Yes</button></td>
+            <td><a href="@Url.Action("List")" class="btn btn-warning">No</a></td>
+        </tr>
+    </table>
+}
